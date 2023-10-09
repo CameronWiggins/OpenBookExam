@@ -71,4 +71,9 @@ public class Vector2 extends MathObject implements Cloneable
     {
         return 2;
     }
+
+    public Vector2 clone()
+    {
+        return this;
+    }
 }
