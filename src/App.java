@@ -1,4 +1,5 @@
 import java.util.HashMap;
+import java.util.Scanner;
 public class App {
     public static void main(String[] args) throws Exception {
         Vector2 v1 = new Vector2(2, 2,"red");
@@ -16,6 +17,27 @@ public class App {
 
         HashMap<String, Vector2> vectorDatabase = new HashMap<String, Vector2>();
         vectorDatabase.put(v1.getDescription(),v1);
-        vectorDatabase.put(v2.getDescription(),v2);
+        vectorDatabase.put(v3.getDescription(),v3);
+
+        Scanner scan = new Scanner(System.in);
+
+        System.out.println("Which vector are you look for? Tell me their description.");
+        String id = scan.nextLine();
+
+        if(vectorDatabase.get(id) == null)
+            {
+                System.out.println("description not found in database");
+            }
+            else
+            {
+                System.out.println(vectorDatabase.get(id));
+            }
+
+
+        System.out.println("Showing All in Vector Database");
+        for (String description : vectorDatabase.keySet())
+            {
+                System.out.println(vectorDatabase.get(description));
+            }
     }
 }
