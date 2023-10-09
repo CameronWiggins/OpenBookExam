@@ -36,6 +36,14 @@ public class Vector2
         }
     }
 
+    public Vector2 combine(Vector2 other)
+    {
+        int newX = this.getX() + other.getX();
+        int newY = this.getY() + other.getY();
+
+        return new Vector2(newX, newY);
+    }
+
     public String toString()
     {
         return "X Axis is " + xAxis + " and Y Axis is " + yAxis;
