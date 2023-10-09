@@ -8,4 +8,9 @@ public class Vector2
         xAxis = x;
         yAxis = y;
     }
+
+    public double magnitude()
+    {
+        return Math.sqrt((xAxis * xAxis) + (yAxis * yAxis));
+    }
 }
