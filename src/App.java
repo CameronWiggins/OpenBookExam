@@ -15,29 +15,24 @@ public class App {
         Vector2 v5 = v4.clone();
         System.out.println(v5);
 
-        HashMap<String, Vector2> vectorDatabase = new HashMap<String, Vector2>();
-        vectorDatabase.put(v1.getDescription(),v1);
-        vectorDatabase.put(v3.getDescription(),v3);
-
+        HashMap<String, MathObject> MathObjectDatabase = new HashMap<String, MathObject>();
+        MathObjectDatabase.put(v1.getDescription(),v1);
+        MathObjectDatabase.put(v3.getDescription(),v3);
         Scanner scan = new Scanner(System.in);
-
         System.out.println("Which vector are you look for? Tell me their description.");
         String id = scan.nextLine();
-
-        if(vectorDatabase.get(id) == null)
+        if(MathObjectDatabase.get(id) == null)
             {
                 System.out.println("description not found in database");
             }
             else
             {
-                System.out.println(vectorDatabase.get(id));
+                System.out.println(MathObjectDatabase.get(id));
             }
-
-
         System.out.println("Showing All in Vector Database");
-        for (String description : vectorDatabase.keySet())
+        for (String description : MathObjectDatabase.keySet())
             {
-                System.out.println(vectorDatabase.get(description));
+                System.out.println(MathObjectDatabase.get(description));
             }
     }
 }
