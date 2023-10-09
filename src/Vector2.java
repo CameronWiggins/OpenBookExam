@@ -59,12 +59,12 @@ public class Vector2 extends MathObject implements Cloneable
         int newX = this.getX() + other.getX();
         int newY = this.getY() + other.getY();
 
-        return new Vector2(newX, newY);
+        return new Vector2(newX, newY, this.getDescription() + " and " + other.getDescription());
     }
 
     public String toString()
     {
-        return "X Axis is " + xAxis + " and Y Axis is " + yAxis;
+        return "X Axis is " + xAxis + " and Y Axis is " + yAxis + " and description is " + this.getDescription();
     }
 
     int getDimensions()

@@ -1,3 +1,4 @@
+import java.util.HashMap;
 public class App {
     public static void main(String[] args) throws Exception {
         Vector2 v1 = new Vector2(2, 2,"red");
@@ -12,6 +13,9 @@ public class App {
         System.out.println(v4);
         Vector2 v5 = v4.clone();
         System.out.println(v5);
-        
+
+        HashMap<String, Vector2> vectorDatabase = new HashMap<String, Vector2>();
+        vectorDatabase.put(v1.getDescription(),v1);
+        vectorDatabase.put(v2.getDescription(),v2);
     }
 }
