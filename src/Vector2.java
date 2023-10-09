@@ -1,10 +1,18 @@
-public class Vector2
+public class Vector2 extends MathObject
 {
     int xAxis;
     int yAxis;
 
     public Vector2(int x, int y)
     {
+        super();
+        xAxis = x;
+        yAxis = y;
+    }
+
+    public Vector2(int x, int y, String descript)
+    {
+        super(descript);
         xAxis = x;
         yAxis = y;
     }
@@ -47,5 +55,10 @@ public class Vector2
     public String toString()
     {
         return "X Axis is " + xAxis + " and Y Axis is " + yAxis;
+    }
+
+    int getDimensions()
+    {
+        return 2;
     }
 }
