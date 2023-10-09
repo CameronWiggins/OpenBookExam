@@ -9,5 +9,7 @@ public class App {
         System.out.println(v3);
         System.out.println(v2.isEquals(v1));
         System.out.println(v2.isEquals(v3));
+        Vector2 v4 = v1.combine(v2);
+        System.out.println(v4);
     }
 }
