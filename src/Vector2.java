@@ -1,4 +1,4 @@
-public class Vector2 extends MathObject
+public class Vector2 extends MathObject implements Cloneable
 {
     int xAxis;
     int yAxis;
@@ -27,6 +27,11 @@ public class Vector2 extends MathObject
         return yAxis;
     }
 
+    public String getDescription()
+    {
+        return super.description;
+    }
+
     public double magnitude()
     {
         return Math.sqrt((xAxis * xAxis) + (yAxis * yAxis));
@@ -34,7 +39,9 @@ public class Vector2 extends MathObject
 
     public boolean isEquals(Vector2 other)
     {
-        if((this.getX() == other.getX()) && (this.getY() == other.getY()))
+        if (!(this.getDescription().equals(null)) && !(other.getDescription().equals(null)))
+        {
+            if((this.getX() == other.getX()) && (this.getY() == other.getY()) && (this.getDescription().equals(other.getDescription())))
         {
             return true;
         }
@@ -42,6 +49,9 @@ public class Vector2 extends MathObject
         {
             return false;
         }
+        }  
+        else
+        return false;
     }
 
     public Vector2 combine(Vector2 other)
